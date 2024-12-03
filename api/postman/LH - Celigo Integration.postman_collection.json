@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "a7bf37b8-8fbf-4410-b30b-f43645a3e94e",
+		"name": "LH - Celigo Integration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DF1: GCP Pub/Sub Subscriber (via webhook) to NetSuite Sales Order (Create), Customer (Create/Update), Customer Deposit (Create)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"token\": \"0c51b3a5d14d45ab8487eb7762583e0e\",\r\n  \"body\": {\r\n        \"totals\": {\r\n        \"shippingTotal\": {\r\n        \"tax\": \"0.00\",\r\n        \"netPrice\": \"0.00\",\r\n        \"grossPrice\": \"0.00\"\r\n        },\r\n        \"orderTotal\": {\r\n        \"tax\": \"0.00\",\r\n        \"netPrice\": \"500.00\",\r\n        \"grossPrice\": \"500.00\"\r\n        },\r\n        \"merchandizeTotal\": {\r\n        \"tax\": \"0.00\",\r\n        \"netPrice\": \"0.00\",\r\n        \"grossPrice\": \"0.00\"\r\n        },\r\n        \"adjustedShippingTotal\": {\r\n        \"tax\": \"0.00\",\r\n        \"netPrice\": \"0.00\",\r\n        \"grossPrice\": \"0.00\"\r\n        },\r\n        \"adjustedMerchandizeTotal\": {\r\n        \"tax\": \"0.00\",\r\n        \"netPrice\": \"0.00\",\r\n        \"grossPrice\": \"0.00\"\r\n        }\r\n    },\r\n    \"taxation\": \"gross\",\r\n    \"siteId\": \"lvhn-uk\",\r\n    \"shippingLineItem\": {\r\n        \"grossPrice\": \"0.00\",\r\n        \"taxRate\": \"0.0000\"\r\n    },\r\n    \"shipment\": {\r\n        \"totals\": {\r\n        \"shippingTotal\": {\r\n            \"tax\": \"0.00\",\r\n            \"netPrice\": \"0.00\",\r\n            \"grossPrice\": \"0.00\"\r\n        }\r\n        },\r\n        \"shippingAddress\": {},\r\n        \"safePlace\": \"\",\r\n        \"gift\": \"false\"\r\n    },\r\n    \"remotehost\": \"195.12.150.196\",\r\n    \"currency\": \"GBP\",\r\n    \"productLineItems\": [\r\n        {\r\n        \"grossPrice\": \"349.95\",\r\n        \"variationModelJSON\": \"{\\\"color\\\":\\\"Green\\\"}\",\r\n        \"taxRate\": \"0.2000\",\r\n        \"taxBasis\": \"349.95\",\r\n        \"quantity\": 1,\r\n        \"proratedPrice\": \"9.99\",\r\n        \"proratedNetPrice\": \"318.14\",\r\n        \"mainProductImage\": \"https://media.lovehoneyassets.com/i/lovehoney/74016_a40515_green_000?$primary$&h=765&w=574&fmt=jpeg\",\r\n        \"id\": \"18295\",\r\n        \"gift\": \"false\",\r\n        \"basePrice\": \"349.95\"\r\n        }\r\n    ],\r\n    \"payments\": [\r\n        {\r\n        \"transactionId\": \"G5CCHR9SV6TG5S82\",\r\n        \"processorId\": \"Adyen_Component\",\r\n        \"amount\": \"9.99\"\r\n        }\r\n    ],\r\n    \"orderDate\": \"2022-04-13T13:59:07.000Z\",\r\n    \"id\": \"UK2_00060479\",\r\n    \"giftCertificateLineItems\": [\r\n        {\r\n        \"grossPrice\": \"500.00\",\r\n        \"senderName\": \"Ivano\",\r\n        \"recipientName\": \"Stephen\",\r\n        \"recipientEmail\": \"lhg.funtest+user106@gmail.com\",\r\n        \"message\": \"Enjoy ivano!\"\r\n        }\r\n    ],\r\n    \"customerLocale\": \"en_GB\",\r\n    \"customer\": {\r\n        \"name\": \"Lovehoney Demo 106\",\r\n        \"email\": \"lhg.funtest+user106@gmail.com\",\r\n        \"billingAddress\": {\r\n            \"postalCode\": \"W10 5HW\",\r\n            \"phone\": \"+447758558314\",\r\n            \"lastName\": \"Demo 106\",\r\n            \"firstName\": \"Lovehoney\",\r\n            \"countryCode\": \"GB\",\r\n            \"city\": \"London\",\r\n            \"address2\": \"\",\r\n            \"address1\": \"106, Nutbourne Street\"\r\n        }\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.eu.integrator.io/v1/exports/62f106e323f6702ed195d258/data",
+					"protocol": "https",
+					"host": [
+						"api",
+						"eu",
+						"integrator",
+						"io"
+					],
+					"path": [
+						"v1",
+						"exports",
+						"62f106e323f6702ed195d258",
+						"data"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

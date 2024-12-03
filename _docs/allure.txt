@@ -1,0 +1,12 @@
+# -------------------------
+# Allure Report
+
+
+Install Allure framework:
+    pip install allure-behave
+
+Execute the regression pack and create the Allure Report into the folder './output/allure'
+    behave -f allure_behave.formatter:AllureFormatter -o output/allure ./features/regression
+
+Start the web-server to see the allure report
+    allure serve ./output/allure
